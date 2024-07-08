@@ -108,13 +108,15 @@ bool SocicSession::Fetch()
 int SocicSession::GetFieldType(int pos)
 {
     const column_properties & props = m_row.get_properties(pos);
-    return props.get_db_type();
+    //return props.get_db_type();
+    return props.get_data_type();
 }
 
 int SocicSession::GetFieldType(const string name)
 {
     const column_properties & props = m_row.get_properties(name);
-    return props.get_db_type();
+    //return props.get_db_type();
+    return props.get_data_type();
 }
 
 bool SocicSession::GetFieldIsNull(int pos)

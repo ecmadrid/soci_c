@@ -20,9 +20,6 @@
 					<Add option="-DDEBUG" />
 					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add library="user32" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/soci_c" prefix_auto="1" extension_auto="1" />
@@ -37,12 +34,10 @@
 					<Add option="-DBUILD_DLL" />
 					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add library="user32" />
-				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-fPIC" />
 			<Add option="-fvisibility=hidden" />
 			<Add directory="soci/include" />
 		</Compiler>
